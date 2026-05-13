@@ -309,7 +309,7 @@ export default function App() {
                 }}
               >
                 <Shuffle className="w-4 h-4" />
-                Shuffle All
+                Acak Quotes Untuk Saya
               </button>
             </div>
           </div>
