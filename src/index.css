@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-slate-900 text-slate-100 font-sans antialiased;
+}
+
+@keyframes color-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes subtle-blink {
+  0%, 100% { opacity: 1; filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4)); }
+  50% { opacity: 0.8; filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.1)); }
+}
+
+.elegant-glow-text {
+  background: linear-gradient(to right, #6EE7B7, #3B82F6, #9333EA, #EC4899, #FBBF24, #6EE7B7);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: color-flow 4s linear infinite, subtle-blink 2s ease-in-out infinite;
+}
